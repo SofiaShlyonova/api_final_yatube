@@ -3,10 +3,11 @@ from rest_framework import permissions
 
 class IsAuthorOrReadOnly(permissions.BasePermission):
     def has_permission(self, request, view):
-        return (request.method in permissions.SAFE_METHODS
-                or request.user.is_authenticated)
+        return True  # Базовый доступ контролируется IsAuthenticatedOrReadOnly
 
     def has_object_permission(self, request, view, obj):
-        if obj.author == request.user:
+        # Разрешаем GET, HEAD, OPTIONS запросы
+        if request.method in permissions.SAFE_METHODS:
             return True
-        return request.method in permissions.SAFE_METHODS
+        # Разрешаем запись только автору объекта
+        return obj.author == request.user
