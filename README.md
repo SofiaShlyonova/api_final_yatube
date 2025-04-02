@@ -14,9 +14,9 @@ Django REST Framework - мощный и гибкий набор инструме
 Simple JWT - плагин аутентификации JSON Web Token для Django REST Framework.\
 Как запустить проект: \
 Клонировать репозиторий и перейти в него в командной строке: 
-> git clone https://github.com/apolwow/api_final_yatube.git \
+> git clone https://github.com/apolwow/api_final_yatube.git 
 
-> cd api_final_yatube \
+> cd api_final_yatube 
 
 
 Создать и активировать виртуальное окружение: 
@@ -27,7 +27,7 @@ Simple JWT - плагин аутентификации JSON Web Token для Dja
 
 Установить зависимости из файла requirements.txt: 
 
-> pip install -r requirements.txt \
+> pip install -r requirements.txt 
 
 Выполнить миграции: 
 
